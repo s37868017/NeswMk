@@ -4,7 +4,7 @@
 .idea/
 news3/src/androidTest/
 news3/src/test/
-news3/src/.gitignore
+news3/.gitignore
 .DS_Store
 /build
 /captures
