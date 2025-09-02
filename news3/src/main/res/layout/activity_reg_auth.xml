@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegAuth">
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"
+        android:textColor="@color/btn"
+        android:layout_below="@id/textHint"
+        android:text="@string/btnReg" />
+
+    <EditText
+        android:id="@+id/editLogin"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:textAlignment="center"
+        android:hint="@string/hintLogin"
+        android:layout_marginTop="70dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_below="@id/editLogin"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:textAlignment="center"
+        android:hint="@string/hintEmail"
+        android:inputType="textWebEmailAddress"
+        android:layout_marginHorizontal="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_below="@id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:textAlignment="center"
+        android:hint="@string/hintPassword"
+        android:inputType="textWebPassword"
+        android:layout_marginHorizontal="15dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textHint"
+        android:layout_below="@id/editPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textColor="@color/red" />
+
+</RelativeLayout>

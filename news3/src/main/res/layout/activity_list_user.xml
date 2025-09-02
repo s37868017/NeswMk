@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/users"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/number_row"
+        android:gravity="right"
+        android:textSize="8sp"
+        tools:ignore="RtlHardcoded,SmallSp"
+        android:text="@string/userInserted"/>
+
+    <TextView
+        android:id="@+id/number_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="right"
+        android:textSize="8sp"
+        tools:ignore="RelativeOverlap,RtlHardcoded,SmallSp" />
+
+    <TextView
+        android:id="@+id/userName_row"
+        android:layout_below="@id/number_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/yellow"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/roleUser_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/before"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="8sp"
+        tools:ignore="RtlHardcoded,SmallSp" />
+
+</RelativeLayout>
