@@ -2,12 +2,9 @@
 .gradle/
 /local.properties
 .idea/
-#/.idea/caches
-#/.idea/libraries
-#/.idea/modules.xml
-#/.idea/workspace.xml
-#/.idea/navEditor.xml
-#/.idea/assetWizardSettings.xml
+news3/src/androidTest/
+news3/src/test/
+news3/src/.gitignore
 .DS_Store
 /build
 /captures
