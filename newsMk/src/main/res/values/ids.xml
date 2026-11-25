@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toSent_btn" type="id" />
+    <item name="nameUser" type="id" />
+    <item name="news_list" type="id" />
+    <item name="textArticle" type="id" />
+    <item name="titlePage" type="id" />
+    <item name="buttonEdit" type="id" />
+    <item name="buttonDelete" type="id" />
+    <item name="toAutorization" type="id" />
+    <item name="edit_btn" type="id" />
+    <item name="editTitle" type="id" />
+    <item name="editIntro" type="id" />
+    <item name="editText" type="id" />
+    <item name="sent_btn" type="id" />
+    <item name="users_list" type="id" />
+    <item name="login" type="id" />
+    <item name="email" type="id" />
+    <item name="role" type="id" />
+    <item name="articles" type="id" />
+    <item name="delete_btn" type="id" />
+    <item name="editUser_btn" type="id" />
+    <item name="publication_list" type="id" />
+    <item name="showLogin" type="id" />
+    <item name="showEmail" type="id" />
+    <item name="showRole" type="id" />
+    <item name="toReg" type="id" />
+    <item name="toMain" type="id" />
+    <item name="auth_btn" type="id" />
+</resources>

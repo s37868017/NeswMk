@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "SQL_Connect"
-include ':news3'
+include ':newsMk'

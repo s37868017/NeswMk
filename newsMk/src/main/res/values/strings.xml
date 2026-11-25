@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_nameMk">НовостиMk</string>
+    <string name="title_activity_sent">SentActivity</string>
+    <string name="hintLogin">Введите login</string>
+    <string name="hintEmail">Введите email</string>
+    <string name="hintPassword">Введите password</string>
+    <string name="btnReg">Регистрация</string>
+    <string name="titleAuth">Вход в личный кабинет</string>
+    <string name="toMain">На главную</string>
+    <string name="btnAuth">Авторизация</string>
+    <string name="btnEnter">Войти</string>
+    <string name="btnInsert">Добавить</string>
+    <string name="btnUpdate">Обновить</string>
+    <string name="dateInsert">"Добавлено: "</string>
+    <string name="userInserted">"Публикаций: "</string>
+    <string name="btnSent">Отправка</string>
+    <string name="titleHint">введите название</string>
+    <string name="introHint">введите интро</string>
+    <string name="textHint">введите текст</string>
+    <string name="btnEdit">Изменить</string>
+    <string name="btnRewrite">Редактировать</string>
+    <string name="btnDelete">Удалить</string>
+    <string name="btnExit">Выйти</string>
+    <string name="toAuth">Авторизоваться</string>
+    <string name="toAdmin">Панель администратора</string>
+    <string name="user">"Текущий пользователь: "</string>
+    <string name="userA">"Пользователем добавлены публикации: "</string>
+    <string name="editLogin">"Введите login"</string>
+    <string name="editEmail">"Введите email"</string>
+    <string name="login">"login :"</string>
+    <string name="email">"email :"</string>
+    <string name="role">"роль :"</string>
+    <string name="takeRole">"Выберите:"</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_login"
+        android:title="Войти" />
+
+<!--    <item-->
+<!--        android:id="@+id/action_profile"-->
+<!--        android:title="Профиль" />-->
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Выйти" />
+
+    <item
+        android:id="@+id/action_admin"
+        android:title="Админ-панель" />
+
+</menu>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--</menu>-->

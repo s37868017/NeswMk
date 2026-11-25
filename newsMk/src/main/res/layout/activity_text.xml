@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".TextActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Статья" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <!-- Дата создания -->
+                <TextView
+                    android:id="@+id/cD_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textSize="7sp"
+                    android:textColor="?attr/colorOnSurfaceVariant" />
+
+                <!-- Заголовок -->
+                <TextView
+                    android:id="@+id/titlePage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <!-- Текст статьи -->
+                <TextView
+                    android:id="@+id/textArticle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="8dp"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <!-- Кнопки действий (видны только авторизованным с правами) -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="32dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonEdit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnRewrite"
+                        android:layout_marginEnd="16dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/btnDelete"
+                        style="@style/Widget.Material3.Button.TextButton" />
+
+                </LinearLayout>
+
+                <!-- Ссылка на вход (для гостей) -->
+                <TextView
+                    android:id="@+id/toAutorization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/toAuth"
+                    android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"
+                    android:clickable="true"
+                    android:focusable="true" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".TextActivity">-->
+
+<!--    &lt;!&ndash; AppBar &ndash;&gt;-->
+<!--    <com.google.android.material.appbar.AppBarLayout-->
+<!--        android:id="@+id/appBarLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:fitsSystemWindows="true"-->
+<!--        app:elevation="0dp">-->
+
+<!--        <com.google.android.material.appbar.CollapsingToolbarLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_scrollFlags="scroll|exitUntilCollapsed"-->
+<!--            app:contentScrim="?attr/colorSurface">-->
+
+<!--            <com.google.android.material.appbar.MaterialToolbar-->
+<!--                android:id="@+id/toolbar"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="?attr/actionBarSize"-->
+<!--                app:navigationIcon="@android:drawable/ic_menu_revert"-->
+<!--                app:layout_collapseMode="pin" />-->
+
+<!--        </com.google.android.material.appbar.CollapsingToolbarLayout>-->
+
+<!--    </com.google.android.material.appbar.AppBarLayout>-->
+
+<!--    &lt;!&ndash; Основной контент &ndash;&gt;-->
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fillViewport="true"-->
+<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:padding="20dp">-->
+
+<!--            &lt;!&ndash; Дата публикации &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="end"-->
+<!--                android:layout_marginBottom="16dp">-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/before"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/dateInsert"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="?attr/colorOnSurfaceVariant"-->
+<!--                    android:layout_marginEnd="4dp" />-->
+
+<!--                <TextView-->
+<!--                    android:id="@+id/cD_row"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textSize="12sp"-->
+<!--                    android:textColor="?attr/colorOnSurfaceVariant"-->
+<!--                    tools:text="16.12.2025" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Заголовок статьи &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/titlePage"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="28sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="?attr/colorOnSurface"-->
+<!--                android:layout_marginBottom="24dp"-->
+<!--                tools:text="Заголовок публикации" />-->
+
+<!--            &lt;!&ndash; Разделитель &ndash;&gt;-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="2dp"-->
+<!--                android:background="?attr/colorPrimary"-->
+<!--                android:layout_marginBottom="24dp" />-->
+
+<!--            &lt;!&ndash; Текст статьи &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textArticle"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:textSize="16sp"-->
+<!--                android:lineSpacingExtra="4dp"-->
+<!--                android:textColor="?attr/colorOnSurface"-->
+<!--                android:layout_marginBottom="32dp"-->
+<!--                tools:text="Текст публикации с подробным описанием..." />-->
+
+<!--            &lt;!&ndash; Кнопки действий &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="16dp">-->
+
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/buttonEdit"-->
+<!--                    style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginEnd="8dp"-->
+<!--                    android:text="@string/btnRewrite"-->
+<!--                    app:icon="@android:drawable/ic_menu_edit"-->
+<!--                    app:iconGravity="textStart" />-->
+
+<!--                <com.google.android.material.button.MaterialButton-->
+<!--                    android:id="@+id/buttonDelete"-->
+<!--                    style="@style/Widget.Material3.Button.OutlinedButton"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:text="@string/btnDelete"-->
+<!--                    android:textColor="?attr/colorError"-->
+<!--                    app:strokeColor="?attr/colorError"-->
+<!--                    app:icon="@android:drawable/ic_menu_delete"-->
+<!--                    app:iconTint="?attr/colorError"-->
+<!--                    app:iconGravity="textStart" />-->
+
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; Ссылка на авторизацию &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/toAutorization"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:text="@string/toAuth"-->
+<!--                android:textColor="?attr/colorPrimary"-->
+<!--                android:textSize="14sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--    </androidx.core.widget.NestedScrollView>-->
+
+<!--</androidx.coordinatorlayout.widget.CoordinatorLayout>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".TextActivity">-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/before"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_toLeftOf="@id/cD_row"-->
+<!--        android:gravity="right"-->
+<!--        android:textSize="8sp"-->
+<!--        tools:ignore="RtlHardcoded,SmallSp"-->
+<!--        android:text="@string/dateInsert"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/cD_row"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:gravity="right"-->
+<!--        android:textSize="8sp"-->
+<!--        tools:ignore="RtlHardcoded,SmallSp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/titlePage"-->
+<!--        android:layout_below="@id/cD_row"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingHorizontal="15dp"-->
+<!--        android:gravity="center"-->
+<!--        android:textColor="@color/text"-->
+<!--        android:textSize="25sp" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textArticle"-->
+<!--        android:layout_below="@id/titlePage"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:paddingHorizontal="15dp"-->
+<!--        android:textSize="18sp" />-->
+
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonEdit"-->
+<!--        android:layout_below="@id/textArticle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginStart="40sp"-->
+<!--        android:textColor="@color/btn"-->
+<!--        android:text="@string/btnRewrite" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/buttonDelete"-->
+<!--        android:layout_below="@id/textArticle"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="40sp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:textColor="@color/btn"-->
+<!--        android:text="@string/btnDelete" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/toAutorization"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/buttonEdit"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:textColor="@color/link"-->
+<!--        android:text="@string/toAuth" />-->
+<!--</RelativeLayout>-->
